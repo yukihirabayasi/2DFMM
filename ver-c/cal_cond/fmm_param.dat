@@ -1,0 +1,4 @@
+15    nterms
+250   num_p
+0.5d0 theta
+0.01  r_min ! for Tree

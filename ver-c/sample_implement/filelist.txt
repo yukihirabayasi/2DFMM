@@ -1,0 +1,62 @@
+program file list
+
+ピッチング弾性翼周りの流れの数値シミュレーション
+ |
+ |
+ |-cal_cond : コンディションファイル
+ |  |
+ |  |-cond.dat
+ |
+ |
+ |-data_out : 計算出力データ
+ |
+ |
+ |-panel : パネル設定フォルダ
+ |
+ |
+ |-pre : プリ処理
+ |  |
+ |  |-ellipse_panel_maker.f90 : 楕円、円の形状データ作成プログラム
+ |  |
+ |  |-square_panel_maker.f90  : 四角の形状データ作成プログラム
+ |  |
+ |  |-naca_symmetric_wing_panel_maker.f90 : naca対称翼形状データ作成プログラム
+ |  |
+ |  |-panel_move.f90 : 作成済みのパネルデータを移動、回転するためのプログラム
+ |
+ |
+ |-post : ポスト処理
+ |  |
+ |  |-velocity_distribution.f90 : 速度分布計算 
+ |  |  (計算格子は、set_gridフォルダのgrid_data.datで設定)
+ |  |
+ |  |-vortex_elements_location.f90 : 渦要素の配置計算
+ |
+ |
+ |-src : ソースファイル
+    |
+    |-a_module.f90         : モジュールファイル
+    |-a_main.f90           : メインプログラム
+    |-a_run_control.f90    : runコントロール (stopするときに使用)
+    |-b_initial.f90        : 初期設定
+    |-b_initial_check.f90  : ライセンス確認
+    |-c_solve_matrix.f90   : 速度マトリックス計算
+    |-c_solve_pressure.f90 : 圧力マトリックス計算
+    |-d_biot.f90           : 渦要素からの誘起速度
+    |-d_biot_p.f90         : 渦要素からの誘起圧力
+    |-d_indus_s.f90        : 吹出しパネルからの誘起速度
+    |-d_indus_v.f90        : 渦パネルからの誘起速度
+    |-e_core.f90           : 粘性拡散
+    |-e_drift.f90          : 渦要素の移動
+    |-e_nascent.f90        : 渦要素の導入
+    |-e_velo.f90           : 渦要素の移動速度
+    |-e_velo_update.f90    : 渦要素の移動速度データの時刻更新
+    |-f_datout.f90         : データ出力
+    |-f_file.f90           : ファイル作成
+    |-f_force.f90          : 流体力計算
+    |-g_check_e.f90        : 渦要素の確認
+    |-g_kutta.f90          : クッタ条件
+    |-g_move.f90           : 弾性翼ピッチングモデル
+    |-inc_2d               : includeファイル
+ 
+ 

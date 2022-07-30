@@ -1,0 +1,103 @@
+  integer :: i,  j,  k
+  integer :: ic, ip
+  integer :: icross
+  integer :: n
+  integer :: n1,  n2
+  integer :: nin, nout
+  integer :: n_check_run
+  integer :: ncount
+  integer :: np
+  integer :: nb
+  integer :: ns
+  integer :: icf
+  integer :: n_ref
+  integer :: new_b
+  integer :: new_s
+  integer :: n_new
+  integer :: info
+
+  real(8) :: angle
+  real(8) :: angle_w
+  real(8) :: ax,     ay
+  real(8) :: ax1,    ay1
+  real(8) :: ax2,    ay2
+  real(8) :: axx1,   ayy1
+  real(8) :: axx2,   ayy2
+  real(8) :: bh
+  real(8) :: b1,     b2
+  real(8) :: bh_b,   bh_s
+  real(8) :: bh_r,   bh_a
+  real(8) :: c_dif
+  real(8) :: corc
+  real(8) :: cir2
+  real(8) :: cor2
+  real(8) :: c1,     c2
+  real(8) :: cp_f,   cf_f
+  real(8) :: coef_a, coef_b
+  real(8) :: coef_omg
+  real(8) :: cx,    cy,    ct
+  real(8) :: ce_a1, ce_a2, ce_a3, ce_a4
+  real(8) :: ce_b1, ce_b2, ce_b3, ce_b4
+  real(8) :: diff
+  real(8) :: dx,    dy
+  real(8) :: dmin,  dmin2
+  real(8) :: dhdt
+  real(8) :: dh1,   dh2
+  real(8) :: dl
+  real(8) :: eta_x, eta_y
+  real(8) :: fg1,   fg2
+  real(8) :: gx,    gy,    gr
+  real(8) :: gzi_x, gzi_y
+  real(8) :: gam_u, gam_d
+  real(8) :: gradient
+  real(8) :: hei
+  real(8) :: height
+  real(8) :: length
+  real(8) :: laynx, layny
+  real(8) :: omg
+  real(8) :: omg_z
+  real(8) :: omega_s
+  real(8) :: poinx, poiny
+  real(8) :: poicx, poicy
+  real(8) :: phay1, phay2
+  real(8) :: panel_c_x
+  real(8) :: panel_c_y
+  real(8) :: panel_c_x_old
+  real(8) :: panel_c_y_old
+  real(8) :: rx,    ry
+  real(8) :: rx1,   ry1
+  real(8) :: rx2,   ry2
+  real(8) :: r_ax,  r_bx
+  real(8) :: r_cy,  r_dy
+  real(8) :: r_a,   r_b
+  real(8) :: r_j,   r_s
+  real(8) :: rv,    rv2
+  real(8) :: rxg1,  rxg2
+  real(8) :: rpc
+  real(8) :: rre
+  real(8) :: r_a_1_4
+  real(8) :: r_unit
+  real(8) :: r_inv
+  real(8) :: rot1,  rot2
+  real(8) :: rot3,  rot4
+  real(8) :: ss
+  real(8) :: sgam
+  real(8) :: u1,    v1
+  real(8) :: u2,    v2
+  real(8) :: u3,    v3
+  real(8) :: u4,    v4
+  real(8) :: ux,    uy,   ur
+  real(8) :: xai
+  real(8) :: xi,    yi
+  real(8) :: xx,    yy
+  real(8) :: xg,    yg
+  real(8) :: r
+  real(8) :: x0,    y0
+  real(8) :: x1,    y1,   r1
+  real(8) :: r2
+  real(8) :: xpc,   ypc
+  real(8) :: v_nor
+  real(8) :: v_flux
+  real(8) :: vmx,   vmy
+  real(8) :: vss,   vin
+

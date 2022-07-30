@@ -1,0 +1,116 @@
+Vortex flow solver ver.003 development history.
+
+*** change log, version 3.0 ***
+
+        変更点/2018/10/24/ w.hattori ver 003-003_kuji2
+
+・d_indus_v.f90
+　ygに関する条件文を修正
+
+        変更点/2016/12/16/ k.kuji ver 003-003_12_24
+
+        変更点/2016/10/24/ k.kuji ver 003-003_10_24
+
+・g_kutta.f90 
+  blobからsheetに変更
+
+
+        変更点/2016/10/14/ k.kuji ver 003-003_10_16
+
+・d_biot_p.f90 
+  ・gh_a
+    gauss legendre積分の重み、係数が内挿されるよう修正
+
+  ・gh_b
+    rsqを変更(xaiの計算のため)
+
+・e_nascent.f90 !!!
+  全面変更
+
+・e_drift.f90
+  ミラーリング時のY軸方向境界以下時の軸対称跳ね返しを修正
+
+・各種postプログラムをミラーリング及びMPI対応 !!!
+
+
+        変更点/2016/04/24/ k.kuji ver 003-003
+
+・h_mpi_bcast_cal_data.f90
+  ミラーリング用の変数を追加修正
+  
+・h_mpi_bcast_cal_update_data.f90
+  uinfをアップデートするように追加修正
+
+        変更点/2016/01/26/ k.kuji ver 002-001-10_stable
+
+・d_biot_p.f90
+  ・gh_r
+   Rの向きに関するif文の、ygの正負判定を修正
+
+
+	変更点/2015/10/29/ k.kuji ver 002-001-10
+
+  ルンゲ=クッタとアダムスバッシュフォースを選択できるように更新
+
+・cond.dat
+  選択のフラグ(i_method)を追加
+
+・a_main.f90
+  call velo_updateを分岐化
+
+・b_read_cond_file.f90
+  cond.datの条件追加に伴う変更
+
+・e_drift.f90
+  ルンゲ=クッタを追加、フラグによる分岐
+  ( 変更前 :: e_drift-old.f90 )
+
+・a_module.f90
+  宣言子を追加
+
+
+	変更点/2015/08/12/ k.kuji
+
+・b_read_cond_file.f90
+  ミラーリング条件追加によるrestart時のバグを修正
+
+・e_drift.f90
+  ミラーリング時のY軸方向境界以下時のvorの跳ね返しを修正
+  
+
+	変更点/2015/08/10/ k.kuji
+
+・a_main.f90
+  アダムスバッシュフォースとの関係性を考慮し
+  加速・減速時の可変dtをコメントアウト
+
+	変更点/2014/12/10/ k.kuji
+
+・g_move_aerofoil.f90
+  物体移動速度の加減速条件及び主流速度の加減速X軸方向への座標を修正
+
+	変更点/2014/10/17/ k.kuji
+
+・e_nacent.f90
+  パネルからの渦要素導入数を複数から１つに変更
+
+
+*** change log, version 1.0 (2012/08/13 12:00:00 K. F.) ***
+
+
+2011/08/18 K. F.
+1) Cleaned up and fixed main solvers.  
+	(all variable type => double precision or integer)
+
+
+2012/01/02 K. F.
+1) Cleaned up and modified main solvers.  
+	(fortran 77 => fortran 90)
+
+2) change matrix solver (inverse matrix => LAPACK)
+
+3) make MPI version, src-MPI
+
+4) make some pre (panel generator) codes
+
+

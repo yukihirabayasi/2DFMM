@@ -1,0 +1,45 @@
+ 
+ *=========================================*
+ *  Numerical Simulation of Unsteady Flow  *
+ *  around bodies by a 2-D Vortex Method   *
+ *  for Parallel Processor with MPI        *
+ *    coded by Kota Fukuda (2004/03/14)    *
+ *=========================================*
+ 
+ 
+ **** Code License check ****
+  System Date :  2021/09/27
+  Valid Until :  2031/03/31
+ 
+ 
+ **** start time ****
+  System Date :  2021/09/27
+  System time :   19:21-03s
+ 
+ 
+ *** Calculation condition ***
+  Reynolds number   =    3000.00
+  Time interval     =    0.01500
+  Attack angle      =    0.00000
+  Calculation Space =  200.00000
+  Uniform flow (x)  =    1.00000
+  Uniform flow (y)  =    0.00000
+  Angular velocity  =    0.00000
+  dh                =    0.01461
+  rotation radius   =   0.95500
+  rotation velosity =  -0.50000
+  tip speed ratio   =  -0.50000
+  cycle_time        =   4.00000
+  pitch_angle_up    =   0.52360
+  pitch_angle_down  =  -0.52360
+  interval for heaving           =   1.00000
+  interval for pitching   (dt_r) =   0.80000
+  interval for pitching (dt_lag) =   0.10000
+ 
+ 
+ *** Panel data ***
+  Panel data   : ../panel/cylinder_200                             
+  Parts number :  1
+     ID :  1   includes   200 elements
+ 
+ 

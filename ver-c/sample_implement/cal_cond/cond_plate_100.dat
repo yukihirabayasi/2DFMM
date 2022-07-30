@@ -1,0 +1,63 @@
+0.0d0           /  angle
+0.0d0           /  angler velocity
+0               /  calculation condition      [0]:initial,      [1]:continue
+1.0d3           /  reynolds number
+0.01d0		/  time interval
+200.0d0         /  calculation region
+1               /  panel height set based on  [0]:panel length, [1]:re number
+0.06d0		/  panel height coefficient
+1500            /  loop
+2               /  save interval
+'../panel/plate_100'		/  panel file
+'../data_out/s_01000_step.dat'	/  continued file data name
+1               /  continue cal. on changed condition  [0]:no,     [1]:yes
+0               /  calculate using kutta condition     [0]:no,     [1]:yes
+1               /  set mirror image                    [0]:no,     [1]:yes
+-0.0d0          /  location of mirror
+1               /  edge condition of panels            [0]:closed, [1]:opened
+1               /  spatial resolution near surface     [0]:single, [1]:multi
+/
+////// *** << PARAMETERS FOR VERTICAL WIND TURBINE >> *** //////
+0.955d0         /  rotation radius
+-0.50d0         /  tsr (tip speed ratio)
+/
+////// *** << PARAMETERS FOR FLAPPING WING >> *** //////
+4.0d0           /  cycle time
+30.0d0          /  base angle of attack for upwards   [deg]
+-30.0d0         /  base angle of attack for downwards [deg]
+0.25d0          /  interval time for heaving direction change    / cycle time
+0.20d0          /  interval time for pitch angle change (dt_r)   / cycle time
+0.025d0         /  interval time for pitch angle change (dt_lag) / cycle time
+/
+////// *** << PARAMETERS FOR MOVING AEROFOIL >> *** //////
+0.0d0           /  body moving  velocity     ( x direction )
+0.0d0           /  body moving  accerelation ( x direction )
+1.0d0           /  uniform flow velocity     ( x direction )
+0.0d0           /  uniform flow accerelation ( x direction )
+/
+////// *** << PARAMETERS FOR HEAVING WING >> *** //////
+0.3d0 	        /  reduced frequency
+0.9d0 	        /  amplitude
+/
+////// *** << PARAMETERS FOR FEATHRING WING >> *** //////
+1.47d0          /  reduced frequency
+0.00d0          /  initial angle        [deg]
+9.00d0          /  amplitude angle      [deg]
+0.25d0          /  center of feathering [x]
+0.00d0          /  center of feathering [y]
+/
+////// *** << PARAMETERS FOR ROTATING CYLINDER >> *** //////
+0.5d0           /  reduced angular velocity
+
+
+! <<< note >>>
+!
+!  1. recomended "time interval dt": Uinf*dt/(panel average length) = 1.00 - 3.05
+!
+!  2. recommended value of "panel height coefficient"
+!    (if select [0]): (panel height)/(panel average length) = 0.83 - 2.00
+!    (if select [1]): (panel height)/(1/Re)^0.5             = 0.50 - 1.00
+!
+!  3. recommended value of "error tolerance pheta" 
+!    pheta = 0.40 - 0.50 ( 0.00 => exact calculation )
+

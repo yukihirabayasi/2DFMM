@@ -1,0 +1,5 @@
+11    nterms ! < 12 (overflow in combination)
+250   num_p
+0.4d0 theta
+7     t_level ! for FMM
+0.01  r_min ! for Tree

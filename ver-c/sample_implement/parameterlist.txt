@@ -1,0 +1,65 @@
+parameter list
+
+プログラム中の主な変数一覧
+
+nt			: 計算ステップ数
+i_write			: データ出力ステップ
+i_continue		: 初期計算[0], 継続計算[1]
+i_change_cond		: 継続計算で計算条件を　変化しない[0], 変化する[1]
+i_kutta_cond		: 解析でクッタ条件を　　使用しない[0], 使用する[1]
+			(エッジが各物体の格子の始まり/終わりの点になるように注意！)
+dt			: タイムステップ
+re			: レイノルズ数
+uinf,vinf			: 主流速度
+theta			: 主流方向
+
+nw			: 物体の数
+cut_r			: 渦要素削除半径 (計算領域の設定)
+pgw(3,nw)		: 第n物体の座標及び角度
+phase(nw)		: 第1物体に対する第n物体の運動位相遅れ
+
+npanel			: パネル総枚数
+a (npanel,npanel)		: 影響係数マトリックス
+b        (npanel)		: 右辺マトリックス
+q        (npanel)		: 吹出しパネル単位長さ当たりの吹出し量
+poi  (2,2,npanel)		: パネル端点座標 ( (x,y), (端点1,2), (パネル番号)の順 )
+poi_c  (2,npanel)		: パネル中心座標 ( (x,y), (パネル番号)の順 )
+poi_n  (2,npanel)		: パネル法線方向単位ベクトル( (x,y), (パネル番号)の順 )
+ds       (npanel)		: パネル長さ
+uw     (2,npanel)		: パネル中心速度( (x,y), (パネル番号)の順 )
+panel_id (npanel)		: パネルが所属する物体番号
+ph       (npanel)		: ベルヌーイ関数 H
+cp_t     (npanel)		: 圧力係数
+cf       (npanel)		: 摩擦抗力係数
+vn_drft (npanel)		: パネル中心法線方向速度
+cir_g    (npanel)		: 渦パネル単位長さ当たりの循環量
+poi_b(2,2,npanel)		: 物体形状パネル端点座標
+vm   (2,2,npanel)		: 物体運動の速度
+am   (2,2,npanel)		: 物体運動の加速度
+dh			: パネル設置高さ
+vn_vis			: 拡散速度
+cx			: 抗力係数
+cy			: 揚力係数
+ct			: モーメント係数
+
+nvor_b			: blob渦要素　総要素数
+vor_b    (2,nvor_b)		: blob渦要素中心座標( (x,y), (要素番号)の順 )
+vor_vb (2,3,nvor_b)	: blob渦要素中心速度( (x,y), (時刻), (要素番号)の順 )
+cir_b      (nvor_b)		: blob渦要素循環量
+cor_b      (nvor_b)		: blob渦要素コア半径
+blob_id    (nvor_b)		: blob渦要素が所属する物体番号
+vor_nb   (2,nvor_b)		: blob渦要素再配列時に使用する変数
+vor_nvb(2,3,nvor_b)	: blob渦要素再配列時に使用する変数
+cir_nb     (nvor_b)		: blob渦要素再配列時に使用する変数
+cor_nb     (nvor_b)		: blob渦要素再配列時に使用する変数
+blob_nid   (nvor_b)		: blob渦要素再配列時に使用する変数
+
+nvor_s			: 矩形渦　総要素数
+vor_s   (2,2,nvor_s)	: 矩形渦要素端点座標( (x,y),(端点1,2),(要素番号)の順 )
+vor_sc    (2.nvor_s)		: 矩形渦要素中心座標( (x,y),(要素番号)の順 )
+vor_vs  (2,3,nvor_s)	: 矩形渦要素中心速度( (x,y),(時刻),(要素番号)の順 )
+cir_s       (nvor_s)		: 矩形渦要素循環量
+cor_s       (nvor_s)		: 矩形渦要素縦方向サイズ
+vor_sr      (nvor_s)		: 矩形渦要素横方向サイズ
+sheet_id    (nvor_s)	: blob渦要素が所属する物体番号
+

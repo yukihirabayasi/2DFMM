@@ -1,0 +1,111 @@
+
+  integer :: i, j, k
+  integer :: ic, ip
+  integer :: icross
+  integer :: n
+  integer :: n0, n1, n2
+  integer :: nin, nout
+  integer :: ncount
+  integer :: np
+  integer :: nb
+  integer :: ns
+  integer :: icf
+  integer :: n_ref
+  integer :: n_vor
+  integer :: new_b
+  integer :: new_s
+  integer :: n_new
+  integer :: info
+
+  double precision :: at
+  double precision :: angle
+  double precision :: ax,     ay
+  double precision :: ax1,    ay1
+  double precision :: ax2,    ay2
+  double precision :: axx1,   ayy1
+  double precision :: axx2,   ayy2
+  double precision :: alpha_p
+  double precision :: bh
+  double precision :: b1,     b2
+  double precision :: bh_b,   bh_s
+  double precision :: bh_r,   bh_a
+  double precision :: corc
+  double precision :: cir2
+  double precision :: cor2
+  double precision :: cor
+  double precision :: c1,     c2
+  double precision :: cp_f,   cf_f
+  double precision :: coef_a, coef_b
+  double precision :: coef_cp
+  double precision :: coef_ct
+  double precision :: cx,    cy,    ct
+  double precision :: ce_a1, ce_a2, ce_a3, ce_a4
+  double precision :: ce_b1, ce_b2, ce_b3, ce_b4
+  double precision :: diff
+  double precision :: dx,    dy
+  double precision :: dmin,  dmin2
+  double precision :: dh1,   dh2,   dh3
+  double precision :: d1,    d2,    d3
+  double precision :: dl
+  double precision :: eta_x, eta_y
+  double precision :: fre
+  double precision :: fai_p
+  double precision :: fg1,   fg2
+  double precision :: gx,    gy,    gr
+  double precision :: gzi_x, gzi_y
+  double precision :: gam_u, gam_d
+  double precision :: hei
+  double precision :: height
+  double precision :: length
+  double precision :: omg
+  double precision :: omg_z
+  double precision :: omega_p
+  double precision :: omega_s
+  double precision :: px0, py0
+  double precision :: poinx, poiny
+  double precision :: poicx, poicy
+  double precision :: panel_c_x
+  double precision :: panel_c_y
+  double precision :: panel_c_x_old
+  double precision :: panel_c_y_old
+  double precision :: rx,    ry
+  double precision :: rxg1,  rxg2
+  double precision :: rx1,   ry1
+  double precision :: rx2,   ry2
+  double precision :: r_ax,  r_bx
+  double precision :: r_cy,  r_dy
+  double precision :: r_a,   r_b
+  double precision :: r_j,   r_s
+  double precision :: rv,    rv2
+  double precision :: rpc
+  double precision :: rsq
+  double precision :: rc
+  double precision :: r_a_1_4
+  double precision :: r_unit
+  double precision :: r_inv
+  double precision :: ss
+  double precision :: sgam
+  double precision :: u1,    v1
+  double precision :: u2,    v2
+  double precision :: u3,    v3
+  double precision :: u4,    v4
+  double precision :: ux,    uy
+  double precision :: ux1,   uy1
+  double precision :: ux2,   uy2
+  double precision :: theta_p
+  double precision :: time_in_cycle
+  double precision :: xai
+  double precision :: xi,    yi
+  double precision :: xx,    yy
+  double precision :: xg,    yg
+  double precision :: x,     y,    r
+  double precision :: x1,    y1,   r1
+  double precision :: x2,    y2,   r2
+  double precision :: x0,    y0,   r0
+  double precision :: xpc,   ypc
+  double precision :: vtt
+  double precision :: v_nor
+  double precision :: v_flux
+  double precision :: vmx,   vmy
+  double precision :: vss,   vin
+

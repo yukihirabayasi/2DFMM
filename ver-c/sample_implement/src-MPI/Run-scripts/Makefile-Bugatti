@@ -1,0 +1,15 @@
+ FC = mpiifort
+ OBJS = a_main.f90
+ PROGRAM = a.out
+
+.SUFFIXES: .f .f90 .F90 .o
+.f90.o:
+	$(FC) -c $(FFLAGS_0) $(FFLAGS_1) $(FFLAGS_2) $(FFLAGS_3) $(FFLAGS_4) $(FFLAGS_5) $(FFLAGS_6) $<
+.F90.o:
+	$(FC) -c $(FFLAGS_0) $(FFLAGS_1) $(FFLAGS_2) $(FFLAGS_3) $(FFLAGS_4) $(FFLAGS_5) $(FFLAGS_6)$<
+
+$(PROGRAM): $(OBJS)
+	$(FC) -o $(PROGRAM) $(FFLAGS_0) $(OBJS) $(FFLAGS_1) $(FFLAGS_2) $(FFLAGS_3) $(FFLAGS_4) $(FFLAGS_5) $(FFLAGS_6) $(DEBUG) $(PROFILER)
+
+clean:
+	rm -f $(PROGRAM)
